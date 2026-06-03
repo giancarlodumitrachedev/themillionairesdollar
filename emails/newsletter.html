@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>The Millionaire's Dollar</title>
+  </head>
+  <body
+    style="margin:0;padding:0;background:#0a0a0a;color:#f5f3ee;-webkit-font-smoothing:antialiased;"
+  >
+    <!--
+      Brand-styled weekly newsletter template.
+      Replace {{...}} tokens before sending (see supabase/functions/send-newsletter).
+    -->
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      style="background:#0a0a0a;"
+    >
+      <tr>
+        <td align="center" style="padding:48px 20px;">
+          <table
+            role="presentation"
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width:560px;"
+          >
+            <!-- Wordmark -->
+            <tr>
+              <td style="padding-bottom:40px;">
+                <div
+                  style="font-family:Georgia,'Times New Roman',serif;font-size:24px;color:#f5f3ee;"
+                >
+                  M.D.
+                </div>
+                <div
+                  style="font-family:ui-monospace,monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#6b6862;margin-top:6px;"
+                >
+                  The Millionaire's Dollar
+                </div>
+              </td>
+            </tr>
+
+            <!-- One statistic from the Wall -->
+            <tr>
+              <td style="padding-bottom:32px;">
+                <div
+                  style="font-family:Georgia,serif;font-size:72px;font-weight:300;color:#f5f3ee;line-height:1;"
+                >
+                  {{stat_number}}
+                </div>
+                <div
+                  style="font-family:ui-monospace,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a8a59e;margin-top:8px;"
+                >
+                  {{stat_label}}
+                </div>
+              </td>
+            </tr>
+
+            <!-- A participant's story -->
+            <tr>
+              <td
+                style="padding:24px 0;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;"
+              >
+                <div
+                  style="font-family:Georgia,serif;font-style:italic;font-size:22px;line-height:1.4;color:#f5f3ee;"
+                >
+                  {{story_quote}}
+                </div>
+                <div
+                  style="font-family:ui-monospace,monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#6b6862;margin-top:16px;"
+                >
+                  {{story_attribution}}
+                </div>
+              </td>
+            </tr>
+
+            <!-- A reflection -->
+            <tr>
+              <td style="padding:32px 0;">
+                <p
+                  style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7;color:#a8a59e;margin:0;"
+                >
+                  {{reflection}}
+                </p>
+              </td>
+            </tr>
+
+            <!-- Sign-off -->
+            <tr>
+              <td style="padding-top:8px;">
+                <div
+                  style="font-family:ui-monospace,monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#6b6862;"
+                >
+                  — The Curators
+                </div>
+              </td>
+            </tr>
+
+            <!-- Footer / unsubscribe -->
+            <tr>
+              <td
+                style="padding-top:40px;margin-top:40px;border-top:1px solid #2a2a2a;"
+              >
+                <div
+                  style="font-family:ui-monospace,monospace;font-size:10px;letter-spacing:1px;color:#6b6862;padding-top:24px;"
+                >
+                  © MMXXVI The Curators ·
+                  <a href="{{unsubscribe_url}}" style="color:#6b6862;">Unsubscribe</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

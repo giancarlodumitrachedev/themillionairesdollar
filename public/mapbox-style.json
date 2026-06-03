@@ -1,0 +1,56 @@
+{
+  "version": 8,
+  "name": "Millionaire's Dollar — Dark",
+  "metadata": {
+    "description": "Custom dark map: black water, near-black land, hairline country borders, no cities/roads/POIs. Country labels appear only at high zoom."
+  },
+  "sources": {
+    "composite": {
+      "type": "vector",
+      "url": "mapbox://mapbox.mapbox-streets-v8"
+    }
+  },
+  "sprite": "mapbox://sprites/mapbox/dark-v11",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": { "background-color": "#0a0a0a" }
+    },
+    {
+      "id": "land",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landuse",
+      "paint": { "fill-color": "#1a1a1a" }
+    },
+    {
+      "id": "admin-boundaries",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "admin",
+      "filter": ["==", ["get", "admin_level"], 0],
+      "paint": { "line-color": "#2a2a2a", "line-width": 0.5 }
+    },
+    {
+      "id": "country-labels",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "place_label",
+      "minzoom": 3.5,
+      "filter": ["==", ["get", "type"], "country"],
+      "layout": {
+        "text-field": ["get", "name_en"],
+        "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+        "text-size": 10,
+        "text-letter-spacing": 0.1
+      },
+      "paint": {
+        "text-color": "#6b6862",
+        "text-halo-color": "#0a0a0a",
+        "text-halo-width": 1
+      }
+    }
+  ]
+}
